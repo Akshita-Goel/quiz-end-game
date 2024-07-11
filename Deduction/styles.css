@@ -1,0 +1,379 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.quiz-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header, .footer {
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-container {
+    flex-grow: 1;
+    margin-right: 20px;
+    max-width: calc(100% - 100px); /* Adjust this to fit your layout */
+}
+
+.question-text {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    word-wrap: break-word; /* Ensure long words break to avoid overflow */
+}
+
+.question-numbers-tab {
+    width: 80px; /* Adjust this width based on your layout */
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.footer .finish-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer .finish-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+}
+
+.header h2 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#timer {
+    margin-top: 10px;
+    background-color: #2196F3;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.question-container {
+    flex: 2;
+    margin-right: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-right: 60px;
+}
+
+.navigation button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196F3;
+    color: white;
+    cursor: pointer;
+}
+
+.navigation button:disabled {
+    background-color: #ccc;
+}
+
+.question-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.question-nav .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.q-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.q-button.active {
+    background-color: #2196F3;
+}
+
+#finish {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.question-numbers {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-left: 2px solid #ddd;
+    padding-left: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 140px;
+}
+
+.question-numbers ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.question-numbers li {
+    margin-bottom: 10px;
+}
+
+.question-numbers button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.question-numbers button.active {
+    background-color: #2196F3;
+}
+
+.question-numbers button.disabled {
+    background-color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.header h2 {
+    margin: 5px 0;
+}
+
+#timer {
+    margin-top: 10px;
+    background-color: #2196F3;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.question-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196F3;
+    color: white;
+    cursor: pointer;
+}
+
+.navigation button:disabled {
+    background-color: #ccc;
+}
+
+.question-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.question-nav .buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.q-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.q-button.active {
+    background-color: #2196F3;
+}
+
+#finish {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+} */

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/resbtn.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>{{username}}</h2>
+            <ul>
+                <li><a href="/results?username={{username}}">Results</a></li>
+                <li><a href="/logout">Sign Out</a></li>
+                <li><a href="/dashboard?username={{username}}">Dashboard</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>RESULTS</h1>
+            <div class="button-container">
+                <a href="/deductionresults?username={{username}}" class="dashboard-button">Deduction</a>
+                <a href="/basicmath?username={{username}}" class="dashboard-button">Basic Mathematics</a>
+                <a href="/verbalreasoning" class="dashboard-button">Verbal Reasoning</a>
+                <a href="/situationaljudgement" class="dashboard-button">Situational Judgement</a>
+                <a href="/strooptest" class="dashboard-button">Stroop Test</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        localStorage.setItem('username', '{{username}}');
+    </script>
+</body>
+</html>
