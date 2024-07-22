@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verbal Reasoning Quiz</title>
+    <link rel="stylesheet" href="stylesre.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Verbal-Reasoning</h1>
+            <div id="timer">20:00</div>
+        </header>
+        <main id="quiz-container">
+            <div id="question-container"></div>
+            <div id="navigation-buttons"></div>
+        </main>
+        <div class="buttons">
+            <button id="previous" onclick="prevQuestion()">Previous</button>
+            <button id="next" onclick="nextQuestion()">Next</button>
+            <button id="finish" onclick="finishQuiz()">Finish</button>
+        </div>
+    </div>
+    <script src="scriptre.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

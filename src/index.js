@@ -231,6 +231,40 @@ app.get('/basicmathematics', (req, res) => {
     res.sendFile(path.join(__dirname, '../BasicMathematics/indexbm.html'));
 });
 
+// Situational Serve QuizTest directory as static content
+app.use('/situational', express.static(path.join(__dirname, '../Situational')));
+
+// Situational Serve QuizTest index.html
+app.get('/situational', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Situational/indexset1.html'));
+});
+
+// Situational Serve QuizTest index.html
+app.get('/situational', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Situational/indexset2.html'));
+});
+
+// Situational Serve QuizTest index.html
+app.get('/situational', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Situational/indexset3.html'));
+});
+
+// Reasoning-quiz Serve QuizTest directory as static content
+app.use('/reasoning-quiz', express.static(path.join(__dirname, '../Reasoning-quiz')));
+
+// Reasoning-quiz Serve QuizTest index.html
+app.get('/reasoning-quiz', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Reasoning-quiz/indexre.html'));
+});
+
+// Stroop-test Serve QuizTest directory as static content
+app.use('/stroop-test', express.static(path.join(__dirname, '../Stroop-test')));
+
+// Stroop-test Serve QuizTest index.html
+app.get('/stroop-test', (req, res) => {
+    res.sendFile(path.join(__dirname, '../Stroop-test/indexst.html'));
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

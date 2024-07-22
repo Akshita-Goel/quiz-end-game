@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Professional font */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Center the content */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: #a262c5; /* Purple */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: #4a148c 3px solid; /* Deep Purple */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px; /* Larger font for prominence */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Timer Styles */
+#timer {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px; /* Slightly larger for visibility */
+    background: #c2185b; /* Vibrant Pinkish Purple */
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Quiz Container Styles */
+main#quiz-container {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border: #4a148c 2px solid; /* Deep Purple */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+#question-container p,
+#question-container ul {
+    margin-bottom: 20px;
+}
+
+#question-container p {
+    background-color: #9f60ba; /* Darker Purple */
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px; /* Slightly larger for better readability */
+}
+
+#question-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#question-container li {
+    background-color: #43a047; /* Green */
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px; /* Larger font for better readability */
+}
+
+#question-container li:hover {
+    background-color: #388e3c; /* Darker Green */
+    transform: scale(1.02);
+}
+
+#question-container li.selected {
+    background-color: #2e7d32; /* Even Darker Green */
+}
+
+/* Navigation Buttons */
+#navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#navigation-buttons button {
+    background: #4a148c; /* Deep Purple */
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#navigation-buttons button:hover {
+    background: #c381e7; /*  Purple */
+    transform: scale(1.1);
+}
+
+/* Action Buttons */
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background: #388e3c; /* Green */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Larger font for better readability */
+}
+
+.buttons button:hover {
+    background: #2e7d32; /* Darker Green */
+}
+
+/* Result Page Styles */
+#result-container {
+    text-align: center;
+}
+
+#result-container h2 {
+    background-color: #43a047; /* Green */
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 22px; /* Slightly larger for emphasis */
+    font-weight: bold;
+}
+
+.explanation {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    text-align: left;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.explanation h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px; /* Larger font for better readability */
+    color: #3c1053; /* Dark Purple */
+    font-weight: bold;
+}
+
+.explanation p {
+    margin: 5px 0;
+}
+
+/* Restart and End Buttons */
+#restart, #end {
+    background: #855cb8; /* Deep Purple */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px; /* Larger font for better readability */
+}
+
+#restart:hover {
+    background: #3c1053; /* Rich Dark Purple */
+}
+
+#end {
+    display: none;
+    background: #c2185b; /* Vibrant Pinkish Purple */
+}
+
+#end:hover {
+    background: #ab47bc; /* Light Purple */
+}

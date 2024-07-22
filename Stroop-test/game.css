@@ -1,0 +1,766 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.timer {
+    position: relative;
+    font-size: 18px;
+    z-index: 2;
+    background-color: #ae7ec4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100px;
+    height:52px;
+}
+
+.container1 {
+    width: 100%;
+    max-width: 1500px;
+    height:700px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    padding-top: -10px; /* Add padding to account for the fixed header */
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    height: 55px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #e0e0e0; /* Added grey background */
+    border: 5px solid rgb(254, 252, 252);
+    border-radius:10px;
+   
+    
+}
+
+.progress1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    height:1200px;
+}
+
+.progress-text1 {
+    display: flex;
+    height:60px;
+    flex-direction: column; /* Stack text vertically */
+    width: 140px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    color: #333;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; /* Center text within the box */
+    margin-left:60px;
+}
+.progress-text1 p {
+    font-size:18px;
+}
+
+
+
+
+.content1 {
+    text-align: center;
+    height: 400px;
+    max-width: 1300px;
+    width: 2000vh; /* Full viewport width */
+    height:1000vh;
+    padding: 40px ; /* Padding only on the top and bottom */
+    background-color: #5dca9c;
+    margin-left: -19px; /* Centering the content */
+    margin-top:40px;
+    
+}
+.thumb{
+    margin-right: 10px;
+    margin-left:500px;
+    margin-top:-200px;
+    margin-bottom: 30px;;
+}
+
+.content1 h1 {
+    font-size: 55px;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top:-10px;
+}
+
+.mouse-icon1 {
+    width: 120px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    margin: 20px auto;
+    background: url('img/mouse.png') no-repeat center center;
+    background-size: contain;
+}
+
+.content1 p {
+    font-size: 30px;
+    color: #fff;
+    margin-top:10px;
+}
+
+.content1 b {
+    font-weight: bold;
+    margin-top:1000px;
+}
+    
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+.container2, .container6, .container10, .container14 {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow:hidden;
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    height: 55px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #e0e0e0; /* Added grey background */
+    border: 5px solid rgb(254, 252, 252);
+    border-radius:10px;
+}
+
+.progress-bar2, .progress-bar3, .progress-bar4 {
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    
+    width:2000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+.progress-bar6, .progress-bar7, .progress-bar8{
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    
+    width:2000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;  
+}
+.progress6, .progress7, .progress8 {
+    background-color: #60cc9c;
+    height: 50px;
+    width: 5%; /* Adjust width as needed */
+    border-radius:5px;
+}
+.progress2, .progress3 ,.progress4 {
+    background-color: #60cc9c;
+    height: 50px;
+    width: 2%; /* Adjust width as needed */
+    border-radius:5px;
+}
+
+.tutorial-step2 {
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Added for centering */
+    margin-left:550px;
+    width:140px;
+    height:57px;
+}
+
+.tutorial-step2 .step-number2 {
+    margin-top: 5px; /* Adjust as needed */
+}
+
+
+.game-area2 {
+    flex: 1;
+    margin-top: -80px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    position: relative;
+}
+
+.instructions2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 50px;
+    margin-top: -75px;
+}
+
+
+
+.color-box2 {
+    background-color: white;
+    border-radius: 25px;
+    display: inline-block;
+    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.1);
+    height: 110px;
+    margin-top: 30px;
+    margin-left:20px;
+}
+
+.color-text2 {
+    font-size: 60px;
+    color: rgb(141, 9, 9);
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.time2 {
+    width: 50px; /* Adjust width as needed */
+    height: 210px; /* Adjust height as needed */
+    margin: -30px auto 70px auto; /* Adjust margins */
+    background: url('img/times.png') no-repeat center center;
+    background-size: contain;
+}
+.icon2 {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    margin-right: 5px; /* Space between icon and text */
+    vertical-align: middle; /* Align with text */
+}
+.color-text14, .color-text16 {
+    color: rgb(32, 181, 104);
+    font-size: 60px;
+    
+    align-items: center;
+    justify-content: center;
+    
+}
+.progress14,.progress16 {
+    background-color: #60cc9c;
+    height: 50px;
+    width: 20%; /* Adjust width as needed */
+    border-radius:5px;
+}
+.color-text10, .color-text12 {
+    color: rgb(32, 181, 104);
+    font-size: 60px;
+    
+    align-items: center;
+    justify-content: center;
+}
+.progress-bar10, .progress-bar11, .progress-bar12{
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    
+    width:2000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;  
+}
+.progress10,.progress12,.progress11 {
+    background-color: #60cc9c;
+    height: 50px;
+    width: 10%; /* Adjust width as needed */
+    border-radius:5px;
+}
+
+
+.color-text6, .color-text7 {
+    color: grey;
+    font-size: 60px;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.container5, .container9, .container13 {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow:hidden;
+}
+
+.header5 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    height: 55px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #e0e0e0; /* Added grey background */
+    border: 5px solid rgb(254, 252, 252);
+    border-radius:10px;
+}
+
+.progress-bar5 {
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    
+    width:2000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.progress5 {
+    background-color: #60cc9c;
+    height: 50px;
+    width: 5%; /* Adjust width as needed */
+    border-radius:5px;
+}
+.progress9 {
+    background-color: #60cc9c;
+    height: 50px;
+    width: 10%; /* Adjust width as needed */
+    border-radius:5px;
+}
+.progress13 {
+    background-color: #60cc9c;
+    height: 50px;
+    width: 20%; /* Adjust width as needed */
+    border-radius:5px;
+}
+
+
+.tutorial-step5 {
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Added for centering */
+    margin-left:550px;
+    width:140px;
+    height:57px;
+}
+
+.tutorial-step5 .step-number5 {
+    margin-top: 50px; /* Adjust as needed */
+}
+
+
+.game-area5 {
+    flex: 1;
+    margin-top: 80px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    position: relative;
+}
+
+.instructions5 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+    margin-top: -75px;
+}
+
+.icon5 {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    margin-right: 5px; /* Space between icon and text */
+    vertical-align: middle; /* Align with text */
+}
+
+.color-box5 {
+    background-color: white;
+    border-radius: 25px;
+    display: inline-block;
+    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.1);
+    height: 110px;
+    margin-top: 120px;
+    margin-left: 20px;
+}
+
+
+
+
+
+.container3, .container8, .container11, .container15 {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow:hidden;
+}
+
+.header3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    height: 55px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #e0e0e0; /* Added grey background */
+    border: 5px solid rgb(254, 252, 252);
+    border-radius:10px;
+}
+
+
+
+.tutorial-step3 {
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Added for centering */
+    margin-left:550px;
+    width:140px;
+    height:57px;
+}
+
+.tutorial-step3 .step-number3 {
+    margin-top: 5px; /* Adjust as needed */
+}
+
+.game-area3 {
+    flex: 1;
+    margin-top: 60px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #60cc9c;
+    position: relative;
+    height:100%;
+}
+
+.instructions3 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 60px;
+    margin-top: -95px;
+    margin-right:-3px;
+}
+
+.icon3 {
+    font-size: 24px;
+    margin-bottom: 1px;
+}
+
+.color-box3 {
+    background-color: white;
+    border-radius: 25px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 110px;
+    margin-top: -340px;
+    margin-bottom:90px;
+    margin-left:20px;
+}
+.color-text3 {
+    font-size: 60px;
+    color: rgb(141, 9, 9);
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px; 
+    margin-bottom:50px;
+}
+
+
+.checkmark3 {
+    font-size: 45px;
+    color: white;
+    position: absolute;
+    margin-bottom: 140px;
+}
+
+
+.time3 {
+    width: 50px; /* Adjust width as needed */
+    height: 120px; /* Adjust height as needed */
+    margin: 18px auto 35px auto; /* Adjust margins */
+    background: url('img/time.png') no-repeat center center;
+    background-size: contain;
+    margin-right:615px;
+}
+
+.icon3 {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    margin-right: 5px; /* Space between icon and text */
+    vertical-align: middle; /* Align with text */
+}
+.color-text8{
+    font-size: 60px;
+    color: grey;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px; 
+    margin-bottom:50px;
+}
+.color-text11{
+    font-size: 60px;
+    color: rgb(32, 181, 104);
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px; 
+    margin-bottom:50px;
+}
+.color-text15{
+    font-size: 60px;
+    color: rgb(32, 181, 104);
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px; 
+    margin-bottom:50px;
+}
+
+
+
+
+.container4 ,.container7 ,.container12,.container16 {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow:hidden;
+}
+
+.progress-bar14, .progress-bar15, .progress-bar16{
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    
+    width:2000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;  
+}
+.progress14,.progress15,.progress16 {
+    background-color: #60cc9c;
+    height: 50px;
+    width: 20%; /* Adjust width as needed */
+    border-radius:5px;
+}
+
+.header4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    height: 55px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #e0e0e0; /* Added grey background */
+    border: 5px solid rgb(254, 252, 252);
+    border-radius:10px;
+}
+
+
+
+.tutorial-step4 {
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Added for centering */
+    margin-left:550px;
+    width:140px;
+    height:57px;
+}
+
+.tutorial-step4 .step-number4 {
+    margin-top: 5px; /* Adjust as needed */
+}
+
+
+
+.game-area4 {
+    margin-top: 200px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ca5d5d;
+    position: relative;
+    height:100%;
+
+}
+
+    
+
+
+.instructions4 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 60px;
+    margin-top: -95px;
+    margin-right:-3px;
+}
+
+.icon4 {
+    font-size: 24px;
+    margin-bottom: 1px;
+}
+
+.color-box4 {
+    background-color: white;
+    border-radius: 25px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 110px;
+    margin-top: -340px;
+    margin-bottom:90px;
+    margin-left:20px;
+}
+
+.color-text4 {
+    font-size: 60px;
+    color: rgb(141, 9, 9);
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px; 
+    margin-bottom:50px;
+    
+}
+
+.checkmark4 {
+    font-size: 45px;
+    color: white;
+    position: absolute;
+    margin-bottom: 140px;
+}
+
+
+
+
+.icon4 {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    margin-right: 5px; /* Space between icon and text */
+    vertical-align: middle; /* Align with text */
+}
+.game-area8 {
+    flex: 1;
+    margin-top: 180px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #60cc9c;
+    position: relative;
+    height:100%;
+}
+.game-area7 {
+    flex: 1;
+    margin-top: 60px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ca5d5d;
+    position: relative;
+    height:100%;
+}

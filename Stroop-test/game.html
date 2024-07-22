@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroop Test </title>
+    <link rel="stylesheet" href="game.css">
+    <script src="game.js" defer></script>
+    
+   
+
+</head>
+
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize timer variables
+            let timerElements = document.querySelectorAll('.timer span');
+            let totalTime = 2 * 60; // 2 minutes in seconds
+    
+            // Update the timer display
+            function updateTimer() {
+                let minutes = Math.floor(totalTime / 60);
+                let seconds = totalTime % 60;
+                let timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                timerElements.forEach(timerElement => {
+                    timerElement.textContent = timeString;
+                });
+            }
+    
+            // Countdown function
+            function countdown() {
+                if (totalTime > 0) {
+                    totalTime--;
+                    updateTimer();
+                } else {
+                    clearInterval(timerInterval);
+                    // Redirect to the score page when the timer runs out
+                    window.location.href = "score.html"; // Change to your score page URL
+                }
+            }
+    
+            // Start the countdown
+            updateTimer();
+            let timerInterval = setInterval(countdown, 1000);
+        });
+    </script>
+    <!-- Container 1 -->
+    <div class="container container1">
+        <div class="header1">
+            <div class="progress1">
+                <div class="progress-text1">
+                    <b>Progress</b>
+                    <b>0 / 4</b>
+                </div>
+            </div>
+            <div class="timer">
+                <span class="timer-text">02:00</span>
+            </div>
+        </div>
+        <div class="content1">
+            <h1>You are Ready</h1>
+            <img src="img/thumb.png" class="thumb" alt="Thumb Image">
+            <div class="mouse-icon1" style="background: url('img/mouse2.png') no-repeat center center"></div>
+            <p>Press <b>Left Click</b> as fast as <br> you can when it matches</p>
+        </div>
+    </div>
+
+    <!-- Container 2 -->
+    <div class="container container2">
+        <div class="header header2">
+            <div class="progress-bar2">
+                <div class="progress2"></div>
+            </div>
+            <div class="tutorial-step2">
+                <span><b>Progress</b></span><br>
+                <span class="step-number2"><b>1 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span class="timer-text">02:00</span>
+            </div>
+        </div>
+        <div class="time2"></div>
+        <div class="game-area2">
+            <div class="color-box2">
+                <div class="instructions2">
+                    <img class="icon2" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text2"><b>BLUE</b></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container 3 -->
+    <div class="container container3">
+        <div class="header header3">
+            <div class="progress-bar3">
+                <div class="progress3"></div>
+            </div>
+            <div class="tutorial-step3">
+                <span><b>Progress</b></span><br>
+                <span class="step-number3"><b>1 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        <div class="time3">
+            
+        </div>
+        <div class="game-area3">
+            <div class="color-box3">
+                <div class="instructions3">
+                    <img class="icon3" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text3"><b>BLUE</b></span>
+            </div>
+            
+            <div class="checkmark3">
+                &#10004; <!-- Checkmark symbol -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Container 4 -->
+    <div class="container container4">
+    <div class="header4">
+        <div class="progress-bar4">
+            <div class="progress4" ></div>
+        </div>
+        <div class="tutorial-step4">
+            <span><b>Progress</b></span><br>
+            <span class="step-number4"><b>1 / 4</b></span>
+        </div>
+        <div class="timer">
+            <span>02:00</span>
+        </div>
+    </div>
+    
+    <div class="game-area4">
+        <div class="color-box4">
+            <div class="instructions4">
+                <img class="icon4" src="img/icon.png" alt="Mouse icon">
+                <span>Left Click when it matches</span>
+            </div>
+            <span class="color-text4"><b>BLUE</b></span>
+        </div>
+        <div class="checkmark4">✖</div>
+    </div>
+</div>
+    <div class="container container5">
+        <div class="header5">
+            <div class="progress-bar5">
+                <div class="progress5" style="width: 5%;"></div>
+            </div>
+            <div class="tutorial-step5">
+                <span><b>Progress</b></span><br>
+                <span class="step-number5"><b>1 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        
+        <div class="game-area5">
+            <div class="color-box5">
+                <div class="instructions5">
+                    <img class="icon5" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container container6">
+        <div class="header2">
+            <div class="progress-bar6">
+                <div class="progress6" style="width: 5%;"></div>
+            </div>
+            <div class="tutorial-step2">
+                <span><b>Progress</b></span><br>
+                <span class="step-number2"><b>2 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        <div class="time2">
+            
+        </div>
+        <div class="game-area2">
+            <div class="color-box2">
+                <div class="instructions2">
+                    <img class="icon2" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text6"><b>GREY</b></span>
+            </div>
+            <!-- Checkmark is not needed as it's handled by JavaScript -->
+        </div>
+    </div>
+    
+    <div class="container container7"><!-- Container7== container4 -->
+        <div class="header4">
+            <div class="progress-bar7">
+                <div class="progress7" style="width: 5%;"></div>
+            </div>
+            <div class="tutorial-step4">
+                <span><b>Progress</b></span><br>
+                <span class="step-number4"><b>2 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        <div class="time3">
+
+        </div>
+        <div class="game-area7">
+            <div class="color-box4">
+                <div class="instructions4">
+                    <img class="icon4" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text7"><b>GREY</b></span>
+            </div>
+            <div class="checkmark4">✖</div>
+        </div>
+    </div>
+    <div class="container container8"> <!--matches to 3-->
+        <div class="header3">
+            <div class="progress-bar8">
+                <div class="progress8" style="width: 5%;"></div>
+            </div>
+            <div class="tutorial-step3">
+                <span><b>Progress</b></span><br>
+                <span class="step-number3"><b>2 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        
+        <div class="game-area8">
+            <div class="color-box3">
+                <div class="instructions3">
+                    <img class="icon3" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text8" style="color: grey;"><b>GREY</b></span>
+            </div>
+            <div class="checkmark3">
+                &#10004; <!-- Checkmark symbol -->
+            </div>
+        </div>
+    </div>
+    <div class="container container9"><!--matches to con5-->
+        <div class="header5">
+            <div class="progress-bar5">
+                <div class="progress9" style="width: 10%;"></div>
+            </div>
+            <div class="tutorial-step5">
+                <span><b>Progress</b></span><br>
+                <span class="step-number5"><b>2 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        
+        <div class="game-area5">
+            <div class="color-box5">
+                <div class="instructions5">
+                    <img class="icon5" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container container10">
+        <div class="header header2">
+            <div class="progress-bar2">
+                <div class="progress10"></div>
+            </div>
+            <div class="tutorial-step2">
+                <span><b>Progress</b></span><br>
+                <span class="step-number2"><b>3 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        <div class="time2">
+           
+        </div>
+        <div class="game-area2">
+            <div class="color-box2">
+                <div class="instructions2">
+                    <img class="icon2" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text10"><b>BLACK</b></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container container11"> <!--matches to 8-->
+        <div class="header3">
+            <div class="progress-bar11">
+                <div class="progress11" style="width: 10%;"></div>
+            </div>
+            <div class="tutorial-step3">
+                <span><b>Progress</b></span><br>
+                <span class="step-number3"><b>3 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        <div class="time3">
+            
+        </div>
+        <div class="game-area3">
+            <div class="color-box3">
+                <div class="instructions3">
+                    <img class="icon3" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text11" ><b>BLACK</b></span>
+            </div>
+            <div class="checkmark3">
+                &#10004; <!-- Checkmark symbol -->
+            </div>
+        </div>
+    </div>
+    <div class="container container12"><!-- Container12 same as 4 n 7-->
+        <div class="header4">
+            <div class="progress-bar12">
+                <div class="progress12" style="width: 10%;"></div>
+            </div>
+            <div class="tutorial-step4">
+                <span><b>Progress</b></span><br>
+                <span class="step-number4"><b>3 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        
+        <div class="game-area4">
+            <div class="color-box4">
+                <div class="instructions4">
+                    <img class="icon4" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text12"><b>BLACK</b></span>
+            </div>
+            <div class="checkmark4">✖</div>
+        </div>
+    </div>
+    <div class="container container13"><!--matches to con5 n 9-->
+        <div class="header5">
+            <div class="progress-bar5">
+                <div class="progress13" style="width: 20%;"></div>
+            </div>
+            <div class="tutorial-step5">
+                <span><b>Progress</b></span><br>
+                <span class="step-number5"><b>3 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        
+        <div class="game-area5">
+            <div class="color-box5">
+                <div class="instructions5">
+                    <img class="icon5" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container container14">
+        <div class="header header2">
+            <div class="progress-bar14">
+                <div class="progress14"></div>
+            </div>
+            <div class="tutorial-step2">
+                <span><b>Progress</b></span><br>
+                <span class="step-number2"><b>4 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        <div class="time2">
+            
+        </div>
+        <div class="game-area2">
+            <div class="color-box2">
+                <div class="instructions2">
+                    <img class="icon2" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text14"><b>PURPLE</b></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container container15"> <!--matches to 8 n 11-->
+        <div class="header3">
+            <div class="progress-bar15">
+                <div class="progress15" style="width: 20%;"></div>
+            </div>
+            <div class="tutorial-step3">
+                <span><b>Progress</b></span><br>
+                <span class="step-number3"><b>4 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        <div class="time3">
+            
+        </div>
+        <div class="game-area3">
+            <div class="color-box3">
+                <div class="instructions3">
+                    <img class="icon3" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text15" ><b>PURPLE</b></span>
+            </div>
+            <div class="checkmark3">
+                &#10004; <!-- Checkmark symbol -->
+            </div>
+        </div>
+    </div>
+    <div class="container container16"><!--  same as 4 n 7 n 12-->
+        <div class="header4">
+            <div class="progress-bar16">
+                <div class="progress16" style="width: 20%;"></div>
+            </div>
+            <div class="tutorial-step4">
+                <span><b>Progress</b></span><br>
+                <span class="step-number4"><b>4 / 4</b></span>
+            </div>
+            <div class="timer">
+                <span>02:00</span>
+            </div>
+        </div>
+        
+        <div class="game-area4">
+            <div class="color-box4">
+                <div class="instructions4">
+                    <img class="icon4" src="img/icon.png" alt="Mouse icon">
+                    <span>Left Click when it matches</span>
+                </div>
+                <span class="color-text16"><b>PURPLE</b></span>
+            </div>
+            <div class="checkmark4">✖</div>
+        </div>
+    </div>
+</body>
+</html>
