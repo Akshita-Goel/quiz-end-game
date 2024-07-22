@@ -94,28 +94,6 @@ app.post("/save-result", async (req, res) => {
     }
 });
 
-// POST endpoint to save quiz results
-app.post("/save-resultbm", async (req, res) => {
-    const { username, scorededuction } = req.body;
-
-    try {
-        const user = await collection.findOneAndUpdate(
-            { name: username },
-            { $push: { results: { date: new Date(), scorededuction } } },
-            { new: true }
-        );
-
-        if (!user) {
-            console.log(`User '${username}' not found in database`);
-            return res.status(404).send("User not found");
-        }
-
-        res.json({ message: 'Score saved successfully' });
-    } catch (error) {
-        console.error("Error saving result:", error);
-        res.status(500).send("Error saving result");
-    }
-});
 
 
 // GET endpoint to retrieve results
@@ -137,24 +115,6 @@ app.get("/deductionresults", async (req, res) => {
     }
 });
 
-// GET endpoint to retrieve results
-app.get("/basicmath", async (req, res) => {
-    const username = req.query.username;
-
-    try {
-        const user = await collection.findOne({ name: username });
-
-        if (!user) {
-            console.log(`User '${username}' not found in database`);
-            return res.status(404).send("User not found");
-        }
-
-        res.render("basicmath", { results: user.results, username });
-    } catch (error) {
-        console.error("Error retrieving results:", error);
-        res.status(500).send("Error retrieving results");
-    }
-});
 
 // Route to download results as PDF
 app.get('/download-results-pdf', async (req, res) => {
@@ -223,47 +183,6 @@ app.get('/deductionresults', (req, res) => {
     res.sendFile(path.join(__dirname, '../deductionresults/index.html'));
 });
 
-// Basic Mathematics Serve QuizTest directory as static content
-app.use('/basicmathematics', express.static(path.join(__dirname, '../BasicMathematics')));
-
-// Basic Mathematics Serve QuizTest index.html
-app.get('/basicmathematics', (req, res) => {
-    res.sendFile(path.join(__dirname, '../BasicMathematics/indexbm.html'));
-});
-
-// Situational Serve QuizTest directory as static content
-app.use('/situational', express.static(path.join(__dirname, '../Situational')));
-
-// Situational Serve QuizTest index.html
-app.get('/situational', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Situational/indexset1.html'));
-});
-
-// Situational Serve QuizTest index.html
-app.get('/situational', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Situational/indexset2.html'));
-});
-
-// Situational Serve QuizTest index.html
-app.get('/situational', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Situational/indexset3.html'));
-});
-
-// Reasoning-quiz Serve QuizTest directory as static content
-app.use('/reasoning-quiz', express.static(path.join(__dirname, '../Reasoning-quiz')));
-
-// Reasoning-quiz Serve QuizTest index.html
-app.get('/reasoning-quiz', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Reasoning-quiz/indexre.html'));
-});
-
-// Stroop-test Serve QuizTest directory as static content
-app.use('/stroop-test', express.static(path.join(__dirname, '../Stroop-test')));
-
-// Stroop-test Serve QuizTest index.html
-app.get('/stroop-test', (req, res) => {
-    res.sendFile(path.join(__dirname, '../Stroop-test/indexst.html'));
-});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
